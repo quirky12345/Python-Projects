@@ -9,6 +9,7 @@ connection = mysql.connector.connect(
 )
 
 def translate(word):
+    # return word
     cursor = connection.cursor()
     cursor.execute("select * from Dictionary where expression = '%s'" %word)
     result1 = cursor.fetchall()
